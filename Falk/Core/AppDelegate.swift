@@ -51,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if (snipRect != CGRect.zero){
                 // to make sure the CGRect is not zero
                 ImageManager.shared.takeAndProcessScreenshot(screenRect: snipRect)
+                WindowManager.shared.showDialogView()
             }
         })
     }

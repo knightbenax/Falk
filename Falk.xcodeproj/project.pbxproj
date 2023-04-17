@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF45C9B929EDACEF00C7C6D2 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45C9B829EDACEF00C7C6D2 /* DialogView.swift */; };
+		EF45C9BB29EDBC6E00C7C6D2 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45C9BA29EDBC6E00C7C6D2 /* WindowManager.swift */; };
 		EFA3C14D29ECBFC2005D18CC /* RectRoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA3C14C29ECBFC2005D18CC /* RectRoundingBox.swift */; };
 		EFBEBEC129ED378D0016AB24 /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEBEC029ED378D0016AB24 /* ScreenManager.swift */; };
 		EFBEBEC329ED48EE0016AB24 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEBEC229ED48EE0016AB24 /* ImageManager.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF45C9B829EDACEF00C7C6D2 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
+		EF45C9BA29EDBC6E00C7C6D2 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		EFA3C14C29ECBFC2005D18CC /* RectRoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectRoundingBox.swift; sourceTree = "<group>"; };
 		EFBEBEC029ED378D0016AB24 /* ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
 		EFBEBEC229ED48EE0016AB24 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		EFCE7ED529ECA26400D2BB59 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EF45C9B829EDACEF00C7C6D2 /* DialogView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				EFCE7EA729ECA22E00D2BB59 /* AppDelegate.swift */,
 				EFBEBEC029ED378D0016AB24 /* ScreenManager.swift */,
 				EFBEBEC229ED48EE0016AB24 /* ImageManager.swift */,
+				EF45C9BA29EDBC6E00C7C6D2 /* WindowManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -296,11 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCE7EAD29ECA22E00D2BB59 /* Falk.xcdatamodeld in Sources */,
+				EF45C9BB29EDBC6E00C7C6D2 /* WindowManager.swift in Sources */,
 				EFBEBEC129ED378D0016AB24 /* ScreenManager.swift in Sources */,
 				EFBEBEC329ED48EE0016AB24 /* ImageManager.swift in Sources */,
 				EFCE7EAA29ECA22E00D2BB59 /* ViewController.swift in Sources */,
 				EFA3C14D29ECBFC2005D18CC /* RectRoundingBox.swift in Sources */,
 				EFCE7EA829ECA22E00D2BB59 /* AppDelegate.swift in Sources */,
+				EF45C9B929EDACEF00C7C6D2 /* DialogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +491,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephod.Falk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephod.Falk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
