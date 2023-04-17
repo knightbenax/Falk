@@ -45,6 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func showSelector(){
+        WindowManager.shared.closeDialogView()
         ScreenManager.shared.snipScreen(snipHandler: { overlayWindow, snipRect in
             self.overlayWindow = overlayWindow
             self.overlayWindow.close()
@@ -52,6 +53,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 // to make sure the CGRect is not zero
                 ImageManager.shared.takeAndProcessScreenshot(screenRect: snipRect)
                 WindowManager.shared.showDialogView()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    WindowManager.shared.closeDialogView()
+                }
             }
         })
     }
