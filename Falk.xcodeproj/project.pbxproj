@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFA3C14D29ECBFC2005D18CC /* RectRoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA3C14C29ECBFC2005D18CC /* RectRoundingBox.swift */; };
+		EFBEBEC129ED378D0016AB24 /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEBEC029ED378D0016AB24 /* ScreenManager.swift */; };
+		EFBEBEC329ED48EE0016AB24 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEBEC229ED48EE0016AB24 /* ImageManager.swift */; };
 		EFCE7EA829ECA22E00D2BB59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE7EA729ECA22E00D2BB59 /* AppDelegate.swift */; };
 		EFCE7EAA29ECA22E00D2BB59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE7EA929ECA22E00D2BB59 /* ViewController.swift */; };
 		EFCE7EAD29ECA22E00D2BB59 /* Falk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFCE7EAB29ECA22E00D2BB59 /* Falk.xcdatamodeld */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFA3C14C29ECBFC2005D18CC /* RectRoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectRoundingBox.swift; sourceTree = "<group>"; };
+		EFBEBEC029ED378D0016AB24 /* ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
+		EFBEBEC229ED48EE0016AB24 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		EFCE7EA429ECA22E00D2BB59 /* Falk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Falk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCE7EA729ECA22E00D2BB59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFCE7EA929ECA22E00D2BB59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFA3C14B29ECBFB3005D18CC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EFA3C14C29ECBFC2005D18CC /* RectRoundingBox.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		EFCE7E9B29ECA22E00D2BB59 = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +111,10 @@
 		EFCE7EA629ECA22E00D2BB59 /* Falk */ = {
 			isa = PBXGroup;
 			children = (
-				EFCE7EA729ECA22E00D2BB59 /* AppDelegate.swift */,
+				EFA3C14B29ECBFB3005D18CC /* CustomViews */,
+				EFCE7ED929ECA8CD00D2BB59 /* Utils */,
+				EFCE7ED629ECA26F00D2BB59 /* Core */,
+				EFCE7ED529ECA26400D2BB59 /* SwiftUI */,
 				EFCE7EA929ECA22E00D2BB59 /* ViewController.swift */,
 				EFCE7EAE29ECA22F00D2BB59 /* Assets.xcassets */,
 				EFCE7EB029ECA22F00D2BB59 /* Main.storyboard */,
@@ -122,6 +139,30 @@
 				EFCE7EC829ECA22F00D2BB59 /* FalkUITestsLaunchTests.swift */,
 			);
 			path = FalkUITests;
+			sourceTree = "<group>";
+		};
+		EFCE7ED529ECA26400D2BB59 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		EFCE7ED629ECA26F00D2BB59 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EFCE7EA729ECA22E00D2BB59 /* AppDelegate.swift */,
+				EFBEBEC029ED378D0016AB24 /* ScreenManager.swift */,
+				EFBEBEC229ED48EE0016AB24 /* ImageManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EFCE7ED929ECA8CD00D2BB59 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCE7EAD29ECA22E00D2BB59 /* Falk.xcdatamodeld in Sources */,
+				EFBEBEC129ED378D0016AB24 /* ScreenManager.swift in Sources */,
+				EFBEBEC329ED48EE0016AB24 /* ImageManager.swift in Sources */,
 				EFCE7EAA29ECA22E00D2BB59 /* ViewController.swift in Sources */,
+				EFA3C14D29ECBFC2005D18CC /* RectRoundingBox.swift in Sources */,
 				EFCE7EA829ECA22E00D2BB59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,12 +467,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Falk/Falk.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KPGYDGPJU8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -451,12 +498,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Falk/Falk.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KPGYDGPJU8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

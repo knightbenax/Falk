@@ -10,11 +10,14 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var overlayWindow : NSWindow!
+    let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
+    let popover = NSPopover()
     
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        initMenuBar()
+        constructMenu()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -23,6 +26,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
+    }
+    
+    func constructMenu() {
+      let menu = NSMenu()
+
+      menu.addItem(NSMenuItem(title: "Select portion of screen", action: #selector(showSelector), keyEquivalent: "P"))
+      menu.addItem(NSMenuItem.separator())
+      menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+
+      statusItem.menu = menu
+    }
+    
+    func initMenuBar(){
+        if let button = statusItem.button {
+            button.image = NSImage(named:NSImage.Name("menubaricon"))
+        }
+    }
+    
+    @objc func showSelector(){
+        ScreenManager.shared.snipScreen(snipHandler: { overlayWindow, snipRect in
+            self.overlayWindow = overlayWindow
+            self.overlayWindow.close()
+            if (snipRect != CGRect.zero){
+                // to make sure the CGRect is not zero
+                ImageManager.shared.takeAndProcessScreenshot(screenRect: snipRect)
+            }
+        })
     }
 
     // MARK: - Core Data stack
