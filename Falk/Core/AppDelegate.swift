@@ -53,7 +53,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 // to make sure the CGRect is not zero
                 ImageManager.shared.takeAndProcessScreenshot(screenRect: snipRect)
                 WindowManager.shared.showDialogView()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                     WindowManager.shared.closeDialogView()
                 }
             }

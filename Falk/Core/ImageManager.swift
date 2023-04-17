@@ -3,7 +3,7 @@
 //  Falk
 //
 //  Created by Bezaleel Ashefor on 17/04/2023.
-//
+//  https://developer.apple.com/documentation/vision/recognizing_text_in_images
 
 import Foundation
 import Cocoa
@@ -11,6 +11,8 @@ import AppKit
 import Vision
 
 class ImageManager{
+    
+    
     
     static var shared = ImageManager()
     
