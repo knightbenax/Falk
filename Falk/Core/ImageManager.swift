@@ -9,10 +9,9 @@ import Foundation
 import Cocoa
 import AppKit
 import Vision
+import UniformTypeIdentifiers
 
 class ImageManager{
-    
-    
     
     static var shared = ImageManager()
     
@@ -68,7 +67,7 @@ class ImageManager{
     }
     
     @discardableResult private func writeCGImage(_ image: CGImage, to destinationURL: URL) -> Bool {
-        guard let destination = CGImageDestinationCreateWithURL(destinationURL as CFURL, kUTTypePNG, 1, nil) else { return false }
+        guard let destination = CGImageDestinationCreateWithURL(destinationURL as CFURL, UTType.png as! CFString, 1, nil) else { return false }
         CGImageDestinationAddImage(destination, image, nil)
         return CGImageDestinationFinalize(destination)
     }
