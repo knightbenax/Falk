@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF41552929F2EC9B00946A16 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41552829F2EC9B00946A16 /* TestView.swift */; };
 		EF45C9B929EDACEF00C7C6D2 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45C9B829EDACEF00C7C6D2 /* DialogView.swift */; };
 		EF45C9BB29EDBC6E00C7C6D2 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45C9BA29EDBC6E00C7C6D2 /* WindowManager.swift */; };
 		EFA3C14D29ECBFC2005D18CC /* RectRoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA3C14C29ECBFC2005D18CC /* RectRoundingBox.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF41552829F2EC9B00946A16 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		EF45C9B829EDACEF00C7C6D2 /* DialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
 		EF45C9BA29EDBC6E00C7C6D2 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		EFA3C14C29ECBFC2005D18CC /* RectRoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectRoundingBox.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				EF45C9B829EDACEF00C7C6D2 /* DialogView.swift */,
+				EF41552829F2EC9B00946A16 /* TestView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				EFBEBEC329ED48EE0016AB24 /* ImageManager.swift in Sources */,
 				EFCE7EAA29ECA22E00D2BB59 /* ViewController.swift in Sources */,
 				EFA3C14D29ECBFC2005D18CC /* RectRoundingBox.swift in Sources */,
+				EF41552929F2EC9B00946A16 /* TestView.swift in Sources */,
 				EFCE7EA829ECA22E00D2BB59 /* AppDelegate.swift in Sources */,
 				EF45C9B929EDACEF00C7C6D2 /* DialogView.swift in Sources */,
 			);

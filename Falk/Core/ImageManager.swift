@@ -19,9 +19,9 @@ class ImageManager{
         let displayID = CGMainDisplayID()
         let screenShot : CGImage? = CGDisplayCreateImage(displayID, rect: screenRect)
         if let screenShot = screenShot {
-//            let desktopURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
-//            let destinationURL = desktopURL.appendingPathComponent("my-image.png")
-//            writeCGImage(screenShot, to: destinationURL)
+            let desktopURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+            let destinationURL = desktopURL.appendingPathComponent("my-image.png")
+            writeCGImage(screenShot, to: destinationURL)
             DispatchQueue.global(qos: .userInitiated).async { [self] in
                 visionRequest(image: screenShot)
             }
@@ -34,7 +34,9 @@ class ImageManager{
         // Create a new request to recognize text.
         let request = VNRecognizeTextRequest(completionHandler: recognizeTextHandler)
 
-        request.usesLanguageCorrection = false
+        request.usesLanguageCorrection = true
+        request.recognitionLevel = .accurate
+        request.minimumTextHeight = 0.02
         
         do {
             // Perform the text-recognition request.
@@ -67,7 +69,7 @@ class ImageManager{
     }
     
     @discardableResult private func writeCGImage(_ image: CGImage, to destinationURL: URL) -> Bool {
-        guard let destination = CGImageDestinationCreateWithURL(destinationURL as CFURL, UTType.png as! CFString, 1, nil) else { return false }
+        guard let destination = CGImageDestinationCreateWithURL(destinationURL as CFURL, kUTTypePNG, 1, nil) else { return false }
         CGImageDestinationAddImage(destination, image, nil)
         return CGImageDestinationFinalize(destination)
     }

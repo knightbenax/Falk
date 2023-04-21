@@ -15,9 +15,11 @@ class WindowManager{
     var dialogController : NSWindowController!
     static var shared = WindowManager()
     private var overlayWindow : NSWindow!
+    private var cursor : NSCursor!
     
     private func createOverlayWindowForSnip() {
-        
+        cursor = NSCursor.crosshair
+        cursor.push()
         let windowRect = NSScreen.main?.frame ?? .zero
         overlayWindow = NSWindow(contentRect: windowRect,
                                  styleMask: .borderless,
@@ -57,6 +59,9 @@ class WindowManager{
     func closeDialogView(){
         dialogController?.close()
     }
+    
+    
+    
     
     
     
